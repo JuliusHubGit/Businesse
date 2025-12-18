@@ -16,8 +16,8 @@ sudo apt install samba samba-common-bin -y
 # Bildordner erstellen (falls nicht vorhanden)
 mkdir -p /home/pi/Pictures
 
-# Berechtigungen setzen
-chmod 777 /home/pi/Pictures
+# Berechtigungen setzen (Benutzer und Gruppe können schreiben)
+chmod 775 /home/pi/Pictures
 ```
 
 ### Konfiguration
@@ -36,8 +36,8 @@ Am Ende der Datei hinzufügen:
    browseable = yes
    writeable = yes
    only guest = no
-   create mask = 0777
-   directory mask = 0777
+   create mask = 0664
+   directory mask = 0775
    public = no
    read only = no
 ```

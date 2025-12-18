@@ -56,13 +56,13 @@ if [[ $REPLY =~ ^[Jj]$ ]]; then
         echo "   path = $PICTURES_DIR" | sudo tee -a /etc/samba/smb.conf
         echo "   browseable = yes" | sudo tee -a /etc/samba/smb.conf
         echo "   writeable = yes" | sudo tee -a /etc/samba/smb.conf
-        echo "   create mask = 0777" | sudo tee -a /etc/samba/smb.conf
-        echo "   directory mask = 0777" | sudo tee -a /etc/samba/smb.conf
+        echo "   create mask = 0664" | sudo tee -a /etc/samba/smb.conf
+        echo "   directory mask = 0775" | sudo tee -a /etc/samba/smb.conf
         echo "   public = no" | sudo tee -a /etc/samba/smb.conf
     fi
     
-    # Set permissions
-    chmod 777 "$PICTURES_DIR"
+    # Set permissions (allow user and group to write)
+    chmod 775 "$PICTURES_DIR"
     
     # Set Samba password
     echo ""

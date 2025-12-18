@@ -305,7 +305,7 @@ sudo apt install python3-tk
 ```bash
 # Berechtigungen setzen
 chmod 755 /home/pi/Businesse/photo_frame.py
-chmod 777 /home/pi/Pictures
+chmod 775 /home/pi/Pictures
 
 # Besitzer ändern
 sudo chown -R pi:pi /home/pi/Businesse
