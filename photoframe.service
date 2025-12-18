@@ -1,0 +1,16 @@
+[Unit]
+Description=Photo Frame Slideshow
+After=graphical.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/Businesse
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+ExecStart=/usr/bin/python3 /home/pi/Businesse/photo_frame.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=graphical.target

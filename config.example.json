@@ -1,0 +1,6 @@
+{
+  "image_folder": "/home/pi/Pictures",
+  "interval_seconds": 60,
+  "shuffle": false,
+  "fullscreen": true
+}
